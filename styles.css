@@ -1,0 +1,260 @@
+body {
+  background-color: #121212; /*  ดำเทาเข้ม */
+  /*color: #f5f5f5; /* ข้อความสีขาวนวล อ่านง่าย */
+  font-family: "Segoe UI", sans-serif;
+}
+h1 {
+  text-decoration: underline;
+}
+.web-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 55px;
+  border-left: 1px solid #f97316;
+  border-right: 1px solid #f97316; /*#2c3a47;*/
+}
+.web-bgc {
+  background-color: ;
+}
+.logo {
+  background-image: ;
+}
+/* Banner */
+.banner {
+  width: 100%;
+  max-width: 1200px;
+  height: 45vh;
+  background: linear-gradient(135deg, #e0f7fa, #fffbea); /* โทนอ่อนสดใส */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.banner-overlay {
+  background-color: rgba(255, 255, 255, 0.6); /* ให้ดูสว่างนุ่ม */
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-logo {
+  max-width: 220px;
+  height: auto;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
+}
+/*navbar*/
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1200px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #f97316;
+  padding: 16px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.navlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navlist li {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navlist li:hover {
+  transform: scale(1.08);
+  background-color: #f3f4f6;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navlist li a {
+  color: #f97316;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.navlist li:hover a {
+  color: #be123c; /* แดงเข้ม ตอน hover */
+}
+
+.main-list {
+  text-decoration: solid;
+  list-style-type: square;
+}
+.service-area {
+  background-color: #f0f4ff;
+  border-left: 6px solid #3b82f6;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 30px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.au-area {
+  background-color: #fff7f0; /* ครีมอ่อน */
+  border-left: 6px solid #f97316; /* ส้มมาตรฐาน (Tailwind orange-500) */
+  padding: 30px;
+  border-radius: 10px;
+  margin: 30px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s;
+}
+.au-area:hover {
+  transform: scale(1.05);
+}
+.scroll-box {
+  display: flex;
+  flex-direction: column; /* เปลี่ยนจากแนวนอนเป็นแนวตั้ง */
+  overflow-y: auto; /* เปิด scroll แนวตั้ง */
+  max-height: 500px; /* กำหนดความสูงของกล่อง ถ้าเกินจะ scroll */
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  scroll-snap-type: y mandatory;
+}
+.card {
+  flex: 0 0 auto;
+  width: 200px;
+  min-height: 250px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  transition: transform 0.2s;
+
+  /* เพิ่ม border ให้เห็นชัด */
+  border: 2px solid #999;
+}
+.scroll-box {
+  display: flex;
+  flex-direction: row; /* เรียงแนวนอน */
+  flex-wrap: wrap; /* พอเต็มแล้วขึ้นบรรทัดใหม่ */
+  gap: 16px; /* ช่องว่างระหว่าง card */
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  max-height: none; /* ไม่ fix ความสูงอีกต่อไป */
+  overflow-y: visible;
+  overflow-x: hidden; /* ป้องกัน scroll แนวนอน */
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.card h3 {
+  margin: 10px 0 6px;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+/* ทำให้แถบ scroll ไม่เกะกะ (เฉพาะบางเบราว์เซอร์) */
+.scroll-box::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+.service-area {
+  background-color: #f0f4ff; /* ฟ้าอ่อน */
+  border-left: 6px solid #3b82f6; /* ฟ้าน้ำเงินแบบ Professional */
+  padding: 30px;
+  border-radius: 10px;
+  margin: 30px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+.Contact {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f7f7f7;
+  border-left: 6px solid greenyellow;
+  border-radius: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+.contact-info {
+  flex: 0 0 70%;
+}
+.contact-image {
+  flex: 0 0 30%;
+}
+.contact-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info,
+  .contact-image {
+    flex: 1 1 100%;
+  }
+
+  .contact-info {
+    margin-bottom: 20px;
+  }
+}
+.footer {
+  background-color: #1a1a1a;
+  padding: 20px 40px;
+  text-align: center;
+  color: #cccccc;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 2px solid #f97316;
+}
+.footer {
+  background-color: #1a1a1a;
+  padding: 20px 40px;
+  text-align: center;
+  color: #cccccc;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 2px solid #f97316;
+}
